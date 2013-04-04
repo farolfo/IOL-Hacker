@@ -12,3 +12,13 @@ If you know about another similar library for sniffing please tell :)
 Why did I do this?
 
 To show why it is so important to CHANGE PERIODICALLY your passwords in your accounts. There are many leaks and bugs in the secutiry systems, such as passing passwords as plain text, and you'll have a better result if you have some conciderations each both.
+
+-------------------------------------------------------------------------------------
+
+Further reading about this development
+
+http://recursos.aldabaknocking.com/libpcapHakin9LuisMartinGarcia.pdf
+http://jnetpcap.com/
+http://httppp.g76r.eu/
+http://www.tcpdump.org/
+http://eecs.wsu.edu/~sshaikot/docs/lbpcap/libpcap-tutorial.pdf
