@@ -5,8 +5,7 @@ A simple Java program that sniffs the network and displays the DNIs and password
 
 It uses tcpdump for sniffing so it must be installed on the machine.
 
-Another possible implementations might use jpcap library, but it's not longer supported and needs andother software to be installed to work.
-If you know about another similar library for sniffing please tell :)
+Another possible aproach it's using the jpcap lib, provided by SourceForce http://sourceforge.net/projects/jpcap/. It uses the libcap library, that must be installed to work.
 
 Why did I do this?
 ------------------
@@ -25,4 +24,8 @@ http://httppp.g76r.eu/
 http://www.tcpdump.org/
 
 http://eecs.wsu.edu/~sshaikot/docs/lbpcap/libpcap-tutorial.pdf
+
+http://sourceforge.net/projects/jpcap/
+
+
 
