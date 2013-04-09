@@ -54,7 +54,8 @@
       <configuration>
         <archive>
           <manifest>
-              <mainClass>my main</mainClass>
+              <addClasspath>true</addClasspath>
+              <mainClass>org.app.Sniffer</mainClass>
           </manifest>
         </archive>
         <descriptorRefs>
