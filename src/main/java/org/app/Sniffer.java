@@ -1,5 +1,6 @@
 package org.app;
 
+import net.sourceforge.jpcap.capture.CaptureDeviceLookupException;
 import net.sourceforge.jpcap.capture.PacketCapture;
 import net.sourceforge.jpcap.capture.PacketListener;
 import net.sourceforge.jpcap.net.Packet;
@@ -10,6 +11,7 @@ import net.sourceforge.jpcap.net.TCPPacket;
  * 
  */
 public class Sniffer {
+	
 	private static final int INFINITE = -1;
 	private static final int PACKET_COUNT = INFINITE;
 	/*
@@ -22,17 +24,22 @@ public class Sniffer {
 	"";
 
 	public static void main(String[] args) {
+		System.out.println(java.lang.System.getProperty("java.library.path"));
 		try {
-			if (args.length == 1) {
-				new Sniffer(args[0]);
-			} else {
-				System.out.println("Usage: java Sniffer [device name]");
-				System.out
-						.println("Available network devices on your machine:");
-				String[] devs = PacketCapture.lookupDevices();
-				for (int i = 0; i < devs.length; i++)
-					System.out.println("\t" + devs[i]);
-			}
+			//if (args.length == 1) {
+				new Sniffer("en1");
+			//} else {
+			//	System.out.println("Usage: java Sniffer [device name]");
+			//	System.out
+			//			.println("Available network devices on your machine:");
+			//	String[] devs = PacketCapture.lookupDevices();
+			//	while(true);
+//				for (int i = 0; i < devs.length; i++)
+//					System.out.println("\t" + devs[i]);
+		//	}
+		} catch (CaptureDeviceLookupException e) {
+			System.out.println("CaptureDviceLookupException occured");
+			e.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -56,7 +63,7 @@ class PacketHandler implements PacketListener {
 		try {
 			// only handle TCP packets
 
-			if (packet instanceof TCPPacket) {
+			if (packet instanceof TCPPacket ) {
 				TCPPacket tcpPacket = (TCPPacket) packet;
 				byte[] data = tcpPacket.getTCPData();
 
