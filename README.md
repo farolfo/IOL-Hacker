@@ -19,19 +19,23 @@ Some tutorials about jpcap and libcap
 
 >http://eecs.wsu.edu/~sshaikot/docs/lbpcap/libpcap-tutorial.pdf
 
+The jpcap project
+>http://sourceforge.net/projects/jpcap/
+
+>https://github.com/jpcap/jpcap
+
 Another library similar to jpcap
 >http://jnetpcap.com/
 
 An HTTP analyzer
 >http://httppp.g76r.eu/
 
-A simple sniffer program
+THE sniffer
+>http://www.wireshark.org/
+
+Another popular sniffer
 >http://www.tcpdump.org/
 
-The jpcap project
->http://sourceforge.net/projects/jpcap/
-
->https://github.com/jpcap/jpcap
 
 ------------------------------------------------------------------------------------------
 Happy hackin' !
