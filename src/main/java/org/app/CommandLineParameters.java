@@ -41,7 +41,6 @@ public class CommandLineParameters {
 	public Level getLoggingLevel() {
 		if (loggingLevel == null || loggingLevel.equals("")
 				|| loggingLevel.equalsIgnoreCase("error")) {
-			LOG.error("You have indicated a wrong type of level logging. It must be OFF, TRACE or ERROR. ERROR it's default.");
 			return DEFAULT_LOG_LEVEL;
 		}
 		if (loggingLevel.equalsIgnoreCase("trace")) {
@@ -53,7 +52,7 @@ public class CommandLineParameters {
 		if (loggingLevel.equalsIgnoreCase("off")) {
 			return Level.OFF;
 		}
-		LOG.error("You have indicated a wrong type of level logging. It must be OFF, TRACE or ERROR. ERROR it's default.");
+		LOG.error("You have indicated a wrong type of level logging. It must be OFF, TRACE or ERROR. " + DEFAULT_LOG_LEVEL + " it's default.");
 		return DEFAULT_LOG_LEVEL;
 	}
 	
