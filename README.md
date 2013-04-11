@@ -6,6 +6,17 @@ A simple Java program that sniffs the network and displays the DNIs and password
 This implementation uses the 'jpcap' lib, provided by SourceForce http://sourceforge.net/projects/jpcap/. 
 Besides, 'jpcap' uses the 'libcap' library, that must be installed and well configured to work.
 
+Execution
+---------
+
+Download the iolHacker.jar file and run
+
+    java -jar iolHacker.jar [-i interface]
+
+You can sepcify an interface in command line, it must be the name of the device you want to capture passwords from(i.e. eth0, eth1).
+If you don't specify it, the program will choose one, AND THERE IS NO GUARANTEE THAT INTERFACE IS ACTIVATED.
+
+
 Why did I do this?
 ------------------
 
