@@ -23,9 +23,10 @@ public class IOLHacker {
 		clp.load(args);
 		Logger.getRootLogger().setLevel(clp.getLoggingLevel());
 		
-		Sniffer sniffer = new Sniffer();
+		ArgsPresentator.displayAppHeader();
+
 		try{
-			ArgsPresentator.displayAppHeader();
+			Sniffer sniffer = new Sniffer();
 			sniffer.sniff(clp.getInterface());
 		} catch (CaptureDeviceNotFoundException i){
 			LOG.error("There are no interfaces or devices detected for sniffing.");
