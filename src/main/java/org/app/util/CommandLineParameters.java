@@ -1,4 +1,4 @@
-package org.app;
+package org.app.util;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -11,7 +11,7 @@ public class CommandLineParameters {
 
 	private static final Logger LOG = Logger.getLogger(CommandLineParameters.class);
 	
-	private static final Level DEFAULT_LOG_LEVEL = Level.TRACE;
+	private static final Level DEFAULT_LOG_LEVEL = Level.ERROR;
 
 	@Option(name = "-l")
 	String loggingLevel;
