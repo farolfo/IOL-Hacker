@@ -8,7 +8,7 @@ public class ArgsPresentator {
 	
 	public static void displayAppHeader(){	
 		System.out.println("\n_____________________       ______  __            ______              ");
-		System.out.println("_____  _/_  __ \\__  /       ___  / / /_____ _________  /______________");
+		System.out.println(" ____  _/_  __ \\__  /       ___  / / /_____ _________  /______________");
 		System.out.println("  __  / _  / / /_  /        __  /_/ /_  __ `/  ___/_  //_/  _ \\_  ___/");
 		System.out.println("___/ /  / /_/ /_  /___      _  __  / / /_/ // /__ _  ,<  /  __/  /    ");
 		System.out.println(" /___/  \\____/ /_____/      /_/ /_/  \\__,_/ \\___/ /_/|_| \\___//_/ "+ VERSION);
@@ -24,11 +24,11 @@ public class ArgsPresentator {
 		System.out.println("--    to IOL, so some of this passwords might be wrong if the user ");
 		System.out.println("--    that has typed it did it wrong.\n---");
 		System.out.println("---\n--\t The results will be displaied as ");
-		System.out.println("--\t\t\t | 'dni' | 'password' \n--");
+		System.out.println("--\t\t\t 'dni' | 'password' \n--");
 		System.out.println(LINE);
 	}
 	
 	public static void display(String dni, String pwd){
-		System.out.println("| '" + dni + "' | '" + pwd + "'");
+		System.out.println(" '" + dni + "' | '" + pwd + "'");
 	}
 }
