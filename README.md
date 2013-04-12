@@ -11,11 +11,12 @@ Installation
 
 1. Make shpure you have installed Java 1.6 or another upgraded version.
 2. Install the [<code>libpcap</code>](http://www.tcpdump.org/) library ([WinPcap](http://www.winpcap.org/) for Windows users).
-3. Now you need the <code>jpcap</code> native methods implementations. For this step I recommend you to copy the <code>jpcap</code> library already compilled that it's provided in the folder <code>jpcapLib</code>.
+3. Now you need the <code>jpcap</code> native methods implementations. For this step I recommend you to copy the <code>jpcap</code> library already compilled that it's provided in the folder <code>utils</code>.
 You must to copy the file that you need for you operating system:
-    * <code>jpcap.dll</code> for Windows users.
-    * <code>jpcap.so</code> for Linux users.
-    * <code>jpcap.lybmg</code> for Mac users.
+
+* <code>jpcap.dll</code> for Windows users. (NOT YET IN THIS REPO)
+* <code>jpcap.so</code> for Linux users. (NOT YET IN THIS REPO)
+* <code>jpcap.jnilib</code> for Mac users.
 
 Copy this file to your Java's library path. If you don't know what path that is, run
     
@@ -29,12 +30,20 @@ Another option for step 3 it's to install by yourself the <code>jpcap</code> lib
 Execution
 ---------
 
-Download the iolHacker.jar file and, in the directory where it's placed, run
+Download the runnable jar <code>iolHacker.jar</code> and, in the directory where it's placed, run
 
-    java -jar iolHacker.jar [-i interface]
+    java -jar iolHacker.jar [-i interface] [-l loggingLevel]
 
-You can sepcify an interface in command line, it must be the name of the device you want to capture passwords from(i.e. <code>eth0</code>, <code>eth1</code>).
+You can sepcify an interface in command line with <code>-i</code>, it must be the name of the device you want to capture passwords from(i.e. <code>eth0</code>, <code>eth1</code>).
 If you don't specify it, the program will choose one, AND THERE IS NO GUARANTEE THAT INTERFACE IS ACTIVATED.
+
+Also you may enable three kinds of [logging](http://en.wikipedia.org/wiki/Computer_data_logging) with the <code>-l</code> parameter, and it's values might be:
+
+* <code>TRACE</code> : Will display a detail of each operation that the program does, besides the normal output of the application. (<code>TRACE</code> will also display <code>ERROR</code>s).
+* <code>ERROR</code> (default) : Will display a message when an error occurred.
+* <code>OFF</code> : Disables the logging system.
+
+If you have any problem, take a look to the logs.
 
 NOTE: As this application is still under development, we suggest that you provide an interface to sniff. You may now your interfaces with the commands <code>ipconfig</code> (Windows) or <code>ifconfig</code> (Unix).
 
