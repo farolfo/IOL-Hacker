@@ -1,9 +1,9 @@
 IOL Hacker
 ==========
 
-A simple Java program that sniffs the network and displays the DNIs and passwords that are exhibit in the plain text of a POST HTTP req.
+A simple Java program that [sniffs](http://en.wikipedia.org/wiki/Packet_analyzer) the network and displays the DNIs and passwords that are exhibit in the plain text of a POST HTTP req.
 
-This implementation uses the <code>jpcap</code> lib, provided by SourceForce (http://sourceforge.net/projects/jpcap/). 
+This implementation uses the [<code>jpcap</code>](http://sourceforge.net/projects/jpcap/) lib, provided by [SourceForce](http://sourceforge.net/). 
 Besides, <code>jpcap</code> uses the <code>libcap</code> library, that must be installed and well configured to work.
 
 Execution
@@ -34,15 +34,18 @@ To show why it is so important to CHANGE PERIODICALLY your passwords in your acc
 Further reading about this development
 -----------------------------------------
 
-Some tutorials about jpcap and libcap
->http://recursos.aldabaknocking.com/libpcapHakin9LuisMartinGarcia.pdf
-
->http://eecs.wsu.edu/~sshaikot/docs/lbpcap/libpcap-tutorial.pdf
+The <code>libcap</code> site (you can also find the <code>tcpdump</code>, powerful command-line packet analyzer)
+>http://www.tcpdump.org/
 
 The jpcap project
 >http://sourceforge.net/projects/jpcap/
 
 >https://github.com/jpcap/jpcap
+
+Some tutorials about jpcap and libcap
+>http://recursos.aldabaknocking.com/libpcapHakin9LuisMartinGarcia.pdf
+
+>http://eecs.wsu.edu/~sshaikot/docs/lbpcap/libpcap-tutorial.pdf
 
 Another library similar to jpcap
 >http://jnetpcap.com/
@@ -52,9 +55,6 @@ An HTTP analyzer
 
 THE sniffer
 >http://www.wireshark.org/
-
-Another popular sniffer
->http://www.tcpdump.org/
 
 
 ------------------------------------------------------------------------------------------
