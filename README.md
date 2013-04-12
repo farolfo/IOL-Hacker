@@ -22,8 +22,36 @@ NOTE: As this application is still under development, we suggest that you provid
 
 Sniffing interface <code>en1</code>
 
-    $> java -jar iolHacker.jar -i en1
-    $> ...
+    ~$ java -jar iolHacker.jar -i en1
+    PacketCapture: loading native library jpcap.. ok
+    
+    _____________________       ______  __            ______              
+     ____  _/_  __ \__  /       ___  / / /_____ _________  /______________
+      __  / _  / / /_  /        __  /_/ /_  __ `/  ___/_  //_/  _ \_  ___/
+    ___/ /  / /_/ /_  /___      _  __  / / /_/ // /__ _  ,<  /  __/  /    
+     /___/  \____/ /_____/      /_/ /_/  \__,_/ \___/ /_/|_| \___//_/ v1.0
+    -----------------------------------------------------------------------
+    --       IOL Hacker v1.0 - the ITBA sniffer application !
+    -----------------------------------------------------------------------
+    ---
+    --       Remember, this is not a malware application, my goal here
+    --    is to show you why YOU MUST CHANGE YOUR PASS PERIODICALLY !!
+    --    and DON'T REPEAT PASS BETWEEN YOUR ACCOUNTS  !!
+    ---
+    --       Also remember that this are ATTEMPTS that a user does 
+    --    to IOL, so some of this passwords might be wrong if the user 
+    --    that has typed it did it wrong.
+    ---
+    ---
+    --     The results will be displaied as 
+    --			 'dni' | 'password' 
+    --
+    -----------------------------------------------------------------------
+     '36985142' | 'mypass'
+     '15427896' | '123456'
+     '35856142' | '14257863165413'
+     '35214569' | 'chukNorrisWasHere'
+    
 
     
 Why did I do this?
