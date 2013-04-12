@@ -23,8 +23,8 @@ public class IOLHacker {
 		clp.load(args);
 		Logger.getRootLogger().setLevel(clp.getLoggingLevel());
 		
-		Sniffer sniffer = new Sniffer();
 		try{
+			Sniffer sniffer = new Sniffer();
 			ArgsPresentator.displayAppHeader();
 			sniffer.sniff(clp.getInterface());
 		} catch (CaptureDeviceNotFoundException i){
