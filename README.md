@@ -1,15 +1,35 @@
 IOL Hacker
 ==========
 
-A simple Java program that [sniffs](http://en.wikipedia.org/wiki/Packet_analyzer) the network and displays the DNIs and passwords that are exhibit in the plain text of a POST HTTP req.
+A simple Java program that [sniffs](http://en.wikipedia.org/wiki/Packet_analyzer) the network and displays the DNIs and passwords that are exhibit in the plain text of a POST HTTP req to the [ITBAOnLine(IOL) page](http://itba.edu.ar/es/iol).
 
 This implementation uses the [<code>jpcap</code>](http://sourceforge.net/projects/jpcap/) lib, provided by [SourceForce](http://sourceforge.net/). 
 Besides, <code>jpcap</code> uses the [<code>libpcap</code>](http://www.tcpdump.org/) library, that must be installed and well configured to work.
 
+Installation
+------------
+
+1. Make shpure you have installed Java 1.6 or another upgraded version.
+2. Install the [<code>libpcap</code>](http://www.tcpdump.org/) library ([WinPcap](http://www.winpcap.org/) for Windows users).
+3. Now you need the <code>jpcap</code> native methods implementations. For this step I recommend you to copy the <code>jpcap</code> library already compilled that it's provided in the folder <code>jpcapLib</code>.
+You must to copy the file that you need for you operating system:
+    * <code>jpcap.dll</code> for Windows users.
+    * <code>jpcap.so</code> for Linux users.
+    * <code>jpcap.lybmg</code> for Mac users.
+
+Copy this file to your Java's library path. If you don't know what path that is, run
+    
+    java -jar displayLibraryPaths.jar
+
+This will display where your Java will search for the lirbaries that it needs (<code>displayLibraryPaths.jar</code> jar file is on the <code>utils</code> directory).
+Now, just copy the library you had downladed to one of those folders.
+
+Another option for step 3 it's to install by yourself the <code>jpcap</code> library from the [jpcap page](http://sourceforge.net/projects/jpcap/).
+
 Execution
 ---------
 
-Download the iolHacker.jar file and run
+Download the iolHacker.jar file and, in the directory where it's placed, run
 
     java -jar iolHacker.jar [-i interface]
 
