@@ -39,7 +39,7 @@ If you don't specify it, the program will choose one, AND THERE IS NO GUARANTEE 
 
 Also you may enable three kinds of [logging](http://en.wikipedia.org/wiki/Computer_data_logging) with the <code>-l</code> parameter, and it's values might be:
 
-* <code>TRACE</code> : Will display a detail of each operation that the program does, besides the normal output of the application. (<code>TRACE</code> will also display <code>ERROR</code>s).
+* <code>TRACE</code> : Will display a detail of each operation that the program does, besides the normal output of the application. (<code>TRACE</code> will also display <code>ERROR</code>).
 * <code>ERROR</code> (default) : Will display a message when an error occurred.
 * <code>OFF</code> : Disables the logging system.
 
