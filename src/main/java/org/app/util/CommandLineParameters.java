@@ -19,6 +19,9 @@ public class CommandLineParameters {
 	@Option(name = "-i")
 	String inet; //interface
 	
+	@Option(name = "-f")
+	String fileName; 
+	
 	public void load(String[] args) {
 
 		CmdLineParser parser = new CmdLineParser(this);
@@ -61,5 +64,12 @@ public class CommandLineParameters {
 			return null;
 		}
 		return inet;
+	}
+
+	public String getFile() {
+		if(fileName == null || fileName.equals("")){
+			return null;
+		}
+		return fileName;
 	}
 }

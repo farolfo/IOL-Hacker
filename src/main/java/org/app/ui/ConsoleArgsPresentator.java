@@ -1,12 +1,14 @@
 package org.app.ui;
 
-public class ArgsPresentator {
+import org.app.util.ArgsPresentator;
+
+public class ConsoleArgsPresentator implements ArgsPresentator{
 
 	private static final String LINE = "-----------------------------------------------------------------------";
 	
 	private static final String VERSION = "v1.0";
 	
-	public static void displayAppHeader(){	
+	public void init(){	
 		System.out.println("\n_____________________       ______  __            ______              ");
 		System.out.println(" ____  _/_  __ \\__  /       ___  / / /_____ _________  /______________");
 		System.out.println("  __  / _  / / /_  /        __  /_/ /_  __ `/  ___/_  //_/  _ \\_  ___/");
@@ -28,7 +30,7 @@ public class ArgsPresentator {
 		System.out.println(LINE);
 	}
 	
-	public static void display(String dni, String pwd){
+	public void display(String dni, String pwd){
 		System.out.println(" '" + dni + "' | '" + pwd + "'");
 	}
 }

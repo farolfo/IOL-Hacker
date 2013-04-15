@@ -9,13 +9,15 @@ import org.apache.log4j.ConsoleAppender;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PatternLayout;
-import org.app.ui.ArgsPresentator;
+import org.app.ui.ConsoleArgsPresentator;
+import org.app.util.ArgsPresentator;
 import org.app.util.CommandLineParameters;
 import org.app.util.Sniffer;
 
 public class IOLHacker {
 	
 	private static final Logger LOG = Logger.getLogger(IOLHacker.class);
+	private static ArgsPresentator argsPresentator;
 	
 	public static void main(String[] args) {
 		initializateLogger();
@@ -23,10 +25,13 @@ public class IOLHacker {
 		clp.load(args);
 		Logger.getRootLogger().setLevel(clp.getLoggingLevel());
 		
+		if(clp.getFile() == null){
+			argsPresentator = new ConsoleArgsPresentator();
+		}
 
 		try{
-			Sniffer sniffer = new Sniffer();
-			ArgsPresentator.displayAppHeader();
+			Sniffer sniffer = new Sniffer(argsPresentator);
+			argsPresentator.init();
 			sniffer.sniff(clp.getInterface());
 		} catch (CaptureDeviceNotFoundException i){
 			LOG.error("There are no interfaces or devices detected for sniffing.");

@@ -33,9 +33,9 @@ public class Sniffer {
 	PacketCapture pcap;
 	PacketListener packetListener;
 	
-	public Sniffer(){
+	public Sniffer(ArgsPresentator argsPresentator){
 		pcap = new PacketCapture();
-		packetListener = new IOLPacketListener();
+		packetListener = new IOLPacketListener(argsPresentator);
 	}
 
 	public void setInterface(String inet) throws CaptureDeviceNotFoundException {

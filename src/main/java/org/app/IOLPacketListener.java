@@ -8,17 +8,20 @@ import net.sourceforge.jpcap.net.Packet;
 import net.sourceforge.jpcap.net.TCPPacket;
 
 import org.apache.log4j.Logger;
-import org.app.ui.ArgsPresentator;
+import org.app.util.ArgsPresentator;
 
 public class IOLPacketListener implements PacketListener{
 	
 	private static final Logger LOG = Logger.getLogger(IOLPacketListener.class);
 
 	private static final String IOL_POST_DATA_PATTERN = "dni=.*&pwd=.*(&.*)*";
-		
-	public IOLPacketListener() {
-	}
 	
+	private ArgsPresentator argsPresentator;
+	
+	public IOLPacketListener(ArgsPresentator argsPresentator) {
+		this.argsPresentator = argsPresentator;
+	}
+
 	public void packetArrived(Packet packet) {
 		try {
 			// only handle TCP packets
@@ -37,7 +40,7 @@ public class IOLPacketListener implements PacketListener{
 							dni = URLDecoder.decode(dni, "UTF-8");
 							pwd = URLDecoder.decode(pwd, "UTF-8");
 							LOG.trace("> dni:'" + dni + "' - pwd:'" + pwd + "'");
-							ArgsPresentator.display(dni, pwd);
+							argsPresentator.display(dni, pwd);
 						}
 					}
 				}
