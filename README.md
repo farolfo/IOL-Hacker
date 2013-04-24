@@ -1,5 +1,7 @@
-IOL Hacker
+IOL Hacker (DEPRECATED)
 ==========
+
+( THIS APP HAS EVOLVED TO THE https://github.com/farolfo/uCracker )
 
 A simple Java program that [sniffs](http://en.wikipedia.org/wiki/Packet_analyzer) the network and displays the DNIs and passwords that are exhibit in the plain text of a POST HTTP req to the [ITBAOnLine(IOL) page](http://itba.edu.ar/es/iol).
 
